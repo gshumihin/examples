@@ -67,7 +67,7 @@
             </p>
 
             <h2 class="content-subhead">Пример блокировки запроса по URL</h2>
-            <img src="https://placeholdit.imgix.net/~text?txtsize=38&txt=image1&w=350&h=150&txttrack=0">
+            <img src="https://placeholdit.imgix.net/~text?txtsize=38&txt=image1&w=300&h=200&txttrack=0">
             <p>
                 Давайте заблокируем картинку, которую вы видите выше.
                 Адрес этой картинки:
@@ -88,25 +88,47 @@
                 3. Если вы все сделали правильно, после обновления страницы картинка исчезла.
             </p>
 
+            <h2 class="content-subhead"><Более общие фильтры</h2>
+            
+            <p>
+                Очень часто бывает, что адрес баннера меняется от раза к разу. Например, он может выглядеть как <code>http://example.ru/ads/banner123.</code>, где 123 — это случайное число. В этом случае блокирование по адресу вам не поможет, вам нужен более общий фильтр, такой как <code>http://example.ru/ads/banner*.jpg</code>. Такого же вида правило поможет, если на странице (сайте) размещены баннеры, использующие URL-адреса, отличающиеся только "хвостом".
+            </p>
+            
+            <h2 class="content-subhead"><Пример</h2>
+            
             <div class="pure-g">
                 <div class="pure-u-1-4">
-                    <img class="pure-img-responsive" src="http://farm3.staticflickr.com/2875/9069037713_1752f5daeb.jpg" alt="Peyto Lake">
+                    <img class="pure-img-responsive" src="http://gshumihin.github.io/examples/imgs/examplead1.png" alt="Image 2">
                 </div>
                 <div class="pure-u-1-4">
-                    <img class="pure-img-responsive" src="http://farm3.staticflickr.com/2813/9069585985_80da8db54f.jpg" alt="Train">
+                    <img class="pure-img-responsive" src="http://gshumihin.github.io/examples/imgs/examplead2.png" alt="Image 3">
                 </div>
                 <div class="pure-u-1-4">
-                    <img class="pure-img-responsive" src="http://farm6.staticflickr.com/5456/9121446012_c1640e42d0.jpg" alt="T-Shirt Store">
+                    <img class="pure-img-responsive" src="http://gshumihin.github.io/examples/imgs/examplead4.png" alt="Image 4">
                 </div>
                 <div class="pure-u-1-4">
-                    <img class="pure-img-responsive" src="http://farm8.staticflickr.com/7357/9086701425_fda3024927.jpg" alt="Mountain">
+                    <img class="pure-img-responsive" src="http://gshumihin.github.io/examples/imgs/examplead5.png" alt="Image 5">
                 </div>
+                
+                <p>
+                    Давайте заблокируем все картинки, расположенные выше. Адреса этих картинок:
+                <code>http://gshumihin.github.io/examples/imgs/examplead1.png</code>
+                <code>http://gshumihin.github.io/examples/imgs/examplead2.png</code>
+                <code>http://gshumihin.github.io/examples/imgs/examplead3.png</code>
+                <code>http://gshumihin.github.io/examples/imgs/examplead4.png</code>
+                </p>
+                <p> 
+                  Для этого:
+                <p>    
+                  1. Добавьте правило http://gshumihin.github.io/examples/imgs/examplead*.png в пользовательский фильтр 
+                </p>
+                <p>
+                  2. Обновите страницу.
+                </p>
+                <p>        
+                  3. Если вы все сделали правильно, после обновления страницы картинки исчезла.
+                </p>
             </div>
-
-            <h2 class="content-subhead">Try Resizing your Browser</h2>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
         </div>
     </div>
 </div>
