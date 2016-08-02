@@ -65,17 +65,38 @@
         <div class="content">
             <h2 class="content-subhead">Правила сокрытия элементов</h2>
             <p>
-                ВАЖНО: Для работы с правилами скрытия необходимы знания HTML и CSS. Фактически, правила скрытия — это просто CSS-селекторы. Adguard добавляет на страницу собственные стили, состоящие из правил скрытия. Ко всем CSS-селекторам применяется стиль {display:none!important}.
+                <b>ВАЖНО:</b> Для работы с правилами скрытия необходимы знания HTML и CSS. Фактически, правила скрытия — это просто CSS-селекторы. Adguard добавляет на страницу собственные стили, состоящие из правил скрытия. Ко всем CSS-селекторам применяется стиль {display:none!important}.
+            </p>
+            <p>
+                <i>Примечание: Правила скрытия кардинально отличаются от обычных правил. Например, не поддерживаются привычные символы масок — они имеют другое значение и применение. </i>
             </p>
 
-            <h2 class="content-subhead">Пример блокировки запроса по URL</h2>
-            <img src="http://gshumihin.github.io/examples/imgs/examplepic.png">
+            <h2 class="content-subhead">Пример сокрытия элемента на странице</h2>
+            <div class="textad">
+                <a href="http://gshumihin.github.io/examples/filterrules/02_Elemhide.html#">Дешевые пельмени, здесь и сейчас!</a>
+            </div>
+            <div id="sponsorad">
+                <a href="http://gshumihin.github.io/examples/filterrules/02_Elemhide.html#">Ну очень дешевые пельмени, клацай сюда!</a>
+            </div>
+            <textad>
+                <a href="http://gshumihin.github.io/examples/filterrules/02_Elemhide.html#">Здесь и только здесь лучшие пельмешки!</a>
+            </textad>
             <p>
-                Давайте заблокируем картинку, которую вы видите выше.
-                Адрес этой картинки:
+                Иногда вы будете встречать рекламу (как представлена выше), которая не может быть заблокирована потому, что она была внедрена как текст в саму веб-страницу. Если вы посмотрите исходный код такой страницы, то найдёте нечто вроде этого:
             </p>
             <p>
-                <code>http://gshumihin.github.io/examples/imgs/examplepic.png</code>
+                <span class="code">
+<pre class="code-rule"><tt><span class="code-tag">&lt;div class=<span class="code-quote">"textad"</span>&gt;</span>
+    Дешевые пельмени, здесь и сейчас!
+<span class="code-tag">&lt;/div&gt;</span>
+<span class="code-tag">&lt;div id=<span class="code-quote">"sponsorad"</span>&gt;</span>
+    Ну очень дешевые пельмени, клацай сюда!
+<span class="code-tag">&lt;/div&gt;</span>
+<span class="code-tag">&lt;textad&gt;</span>
+    Здесь и только здесь лучшие пельмешки!
+<span class="code-tag">&lt;/textad&gt;</span>
+</tt></pre>
+</span>
             </p>
              
             <p> 
