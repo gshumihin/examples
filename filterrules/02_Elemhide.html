@@ -72,6 +72,7 @@
             </p>
 
             <h2 class="content-subhead">Пример сокрытия элемента на странице</h2>
+            <span class="content-subhead">
             <div class="texxtad">
                 <a href="http://gshumihin.github.io/examples/filterrules/02_Elemhide.html#">Дешевые пельмени, здесь и сейчас!</a>
             </div>
@@ -81,81 +82,63 @@
             <textad>
                 <a href="http://gshumihin.github.io/examples/filterrules/02_Elemhide.html#">Здесь и только здесь лучшие пельмешки!</a>
             </textad>
+        </span>
+
             <p>
                 Иногда вы будете встречать рекламу (как представлена выше), которая не может быть заблокирована потому, что она была внедрена как текст в саму веб-страницу. Если вы посмотрите исходный код такой страницы, то найдёте нечто вроде этого:
             </p>
-            <p>
-                <span class="code">
-<pre class="code-rule"><tt><span class="code-tag">&lt;div class=<span class="code-quote">"texxtad"</span>&gt;</span>
-    Дешевые пельмени, здесь и сейчас!
-<span class="code-tag">&lt;/div&gt;</span>
-<span class="code-tag">&lt;div id=<span class="code-quote">"sponsorad"</span>&gt;</span>
-    Ну очень дешевые пельмени, клацай сюда!
-<span class="code-tag">&lt;/div&gt;</span>
-<span class="code-tag">&lt;textad&gt;</span>
-    Здесь и только здесь лучшие пельмешки!
-<span class="code-tag">&lt;/textad&gt;</span>
-</tt></pre>
-</span>
-            </p>
-             
-            <p> 
-                Для этого:
-            </p>
-            <ol>
-                <li>Скопируйте этот адрес в ваш пользовательский фильтр.</li>
-                <li>Обновите страницу.</li>
-                <li>Если вы все сделали правильно, после обновления страницы картинка исчезла.</li>
-            </ol>
 
-            <h2 class="content-subhead">Более общие фильтры</h2>
-            
+            <pre class="code-rule"><tt><span class="code-tag">            &lt;div class=<span class="code-quote">"textad"</span>&gt;</span>
+                Дешевые пельмени, здесь и сейчас!
+            <span class="code-tag">&lt;/div&gt;</span>
+            <span class="code-tag">&lt;div id=<span class="code-quote">"sponsorad"</span>&gt;</span>
+                Ну очень дешевые пельмени, клацай сюда!
+            <span class="code-tag">&lt;/div&gt;</span>
+            <span class="code-tag">&lt;textad&gt;</span>
+                Здесь и только здесь лучшие пельмешки!
+            <span class="code-tag">&lt;/textad&gt;</span>
+            </tt></pre>
+
+            <p> 
+                Первый рекламный слоган выше находится внутри элемента div с классом «textad».<br>
+                Для его сокрытия достаточно добавить в фильтр следующее правило: 
+                <i>##div.textad</i>. 
+            </p>
             <p>
-                Очень часто бывает, что адрес баннера меняется от раза к разу. Например, он может выглядеть как <code>http://example.ru/ads/banner123.</code>, где 123 — это случайное число. В этом случае блокирование по адресу вам не поможет, вам нужен более общий фильтр, такой как <code>http://example.ru/ads/banner*.jpg</code>. Такого же вида правило поможет, если на странице (сайте) размещены баннеры, использующие URL-адреса, отличающиеся только "хвостом".
+                Использование «##» является признаком правила скрытия, а все, что следует за этими символами — селектором, определяющим скрываемый элемент. 
+            </p>
+            <p>
+                Скрывать элементы по их атрибуту id можно аналогичным образом. И для бловировки второго рекламного слогана из приведенного выше примера, подойдет правило:
+                <br><i>##div#sponsorad</i>
+                <br>Указывать имя самого элемента не обязательно, правило
+                <i>###sponsorad</i>
+                так же будет работать. 
+            </p>
+            <p>
+                Также, можно скрывать элементы лишь по их имени. Например, для скрытия третьего рекламного слогана можно добавить правило:
+                <br><i>##textad</i> 
             </p>
             
-            <h2 class="content-subhead">Пример</h2>
+            <h2 class="content-subhead">Ограничение правил определенными доменами</h2>
+
+            <p>
+                Обычно вы хотите скрыть определенную рекламу на определенном сайте и не хотите, чтобы это правило применялось на других сайтах. Например, правило ##.sponsor может скрыть полезный код на некоторых сайтах. Но если вы напишете его как example.com##.sponsor оно будет применено на http://example.com/ и http://something.example.com/ но не на http://example.org/.
+            </p>
+            <p>
+                Вы также можете определить множество доменов — просто разделите их запятыми: domain1.example,domain2.example,domain3.example##.sponsor.
+            </p>
+            <p>
+                Если доменному имени предшествует "~", правило не будет применяться на страницах этого домена. Примеры: Правило ~example.com##.sponsor будет применяться на страницах любых сайтов, кроме «example.com». Правило example.com,~foo.example.com##.sponsor позволяет применять правило на сайте "example.com" исключая поддомен "foo.example.com".
+            </p>
+
+            <h2 class="content-subhead"> Исключения для правил сокрытия контента</h2>
+            <p>
+                Существует специальный тип правил, «выключающий» отдельные правила скрытия на определенных доменах. Например, правило ##div.textad можно выключить на домене example.com, добавив исключение example.com#@#div.textad. Комбинация этих двух правил идентична по эффекту одному правилу ~example.com##div.textad.
+            </p>
+            <p>
+                Применять такие исключения рекомендуется только в случае, когда изменить само правило скрытия не представляется возможным. Во всех остальных случаях лучше изменить само правило.
+            </p>
             
-            <div class="pure-g">
-                <div class="pure-u-1-4">
-                    <div class="l-box">
-                    <img class="pure-img-responsive" src="http://gshumihin.github.io/examples/imgs/examplead1.png" alt="Image 2">
-                    </div>
-                </div>
-                <div class="pure-u-1-4">
-                    <div class="l-box">
-                    <img class="pure-img-responsive" src="http://gshumihin.github.io/examples/imgs/examplead2.png" alt="Image 3">
-                    </div>
-                </div>
-                <div class="pure-u-1-4">
-                    <div class="l-box">
-                    <img class="pure-img-responsive" src="http://gshumihin.github.io/examples/imgs/examplead3.png" alt="Image 4">
-                    </div>
-                </div>
-                <div class="pure-u-1-4">
-                    <div class="l-box">
-                    <img class="pure-img-responsive" src="http://gshumihin.github.io/examples/imgs/examplead4.png" alt="Image 5">
-                    </div>
-                </div>
-            </div>    
-                
-                <p>
-                    Давайте заблокируем все картинки, расположенные выше. Адреса этих картинок:
-                </p>
-                <p>
-                <code>http://gshumihin.github.io/examples/imgs/examplead1.png</code>
-                <code>http://gshumihin.github.io/examples/imgs/examplead2.png</code>
-                <code>http://gshumihin.github.io/examples/imgs/examplead3.png</code>
-                <code>http://gshumihin.github.io/examples/imgs/examplead4.png</code>
-                </p> 
-                <p> 
-                  Для этого:
-                </p>
-                <ol> 
-                    <li>Добавьте правило http://gshumihin.github.io/examples/imgs/examplead*.png в пользовательский фильтр.</li>
-                    <li>Обновите страницу.</li>
-                    <li>Если вы все сделали правильно, после обновления страницы картинки исчезла.</li>
-                </ol>
         </div>
     </div>
 </div>
