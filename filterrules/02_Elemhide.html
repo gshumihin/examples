@@ -147,6 +147,66 @@
             <p>
                 Применять такие исключения рекомендуется только в случае, когда изменить само правило скрытия не представляется возможным. Во всех остальных случаях лучше изменить само правило.
             </p>
+
+            <h2 class="content-subhead"> Примеры селекторов</h2>
+            <p>
+                В таблице ниже приведены примеры наиболее распространных, на наш взгляд, селекторов:
+            </p>
+
+            <table class="pure-table">
+                <thead>
+                    <tr>
+                        <th>Селектор</th>
+                        <th>Что блокирует</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>###advert</code></td>
+                        <td>Matches the element with the unique id &quot;advert&quot;</td>
+                    </tr>
+                    <tr>
+                        <td><code>##.advert</code></td>
+                        <td>Matches elements with the class &quot;advert&quot;</td>
+                    </tr>
+                    <tr>
+                        <td><code>##table[height=&quot;100&quot;][width=&quot;100&quot;]</code></td>
+                        <td>Matches a table with a height of 100 and a width of 100</td>
+                    </tr>
+                    <tr>
+                        <td><code>##a[href=&quot;http://example.com/&quot;]</code></td>
+                        <td>Matches links to http://example.com/</td>
+                    </tr>
+                    <tr>
+                        <td><code>##div[style=&quot;width:300px;height:250px;&quot;]</code></td>
+                        <td>Matches div elements that have exactly the style specified</td>
+                    </tr>
+                    <tr>
+                        <td><code>###advert &gt; .link</code></td>
+                        <td>Matches elements with the class &quot;link&quot; that are enclosed within elements with the id &quot;advert&quot;</td>
+                    </tr>
+                    <tr>
+                        <td><code>###advert + .link</code></td>
+                        <td>Matches elements with the class &quot;link&quot; that are immediately preceded by elements with the id &quot;advert&quot;</td>
+                    </tr>
+                    <tr>
+                        <td><code>##a[href^=&quot;http://example.com/&quot;]</code></td>
+                        <td>Matches links to any pages hosted on http://example.com/</td>
+                    </tr>
+                    <tr>
+                        <td><code>##div[style^=&quot;width:300px;height:250px;&quot;]</code></td>
+                        <td>Matches div elements that start with the style specified</td>
+                    </tr>
+                    <tr>
+                        <td><code>##div[style$=&quot;width:300px;height:250px;&quot;]</code></td>
+                        <td>Matches div elements that end the style specified</td>
+                    </tr>
+                    <tr>
+                        <td><code>##div[style*=&quot;width:300px;height:250px;&quot;]</code></td>
+                        <td>Matches div elements that containing the style specified</td>
+                    </tr>
+                </tbody>
+            </table>
             
         </div>
     </div>
