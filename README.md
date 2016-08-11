@@ -3,10 +3,10 @@
 2. Blocking
 3. Exceptions
 4. Options
-* $image, $stylesheet, $xmlhttprequest
-* $empty
-* $popup
-* $mp4
+  * $image, $stylesheet, $xmlhttprequest
+  * $empty
+  * $popup
+  * $mp4
 5. $replace rules
 6. RegExp rules
 7. Elemhide
