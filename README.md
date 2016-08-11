@@ -9,7 +9,7 @@
     * $mp4
   * $replace rules
   * RegExp rules
-2. Elemhide
+2. [Elemhide](http://gshumihin.github.io/examples/filterrules/02_Elemhide.html#)
 3. CSS injections
 4. JS rules
 5. HTML filtering rules
