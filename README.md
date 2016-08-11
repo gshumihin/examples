@@ -1,15 +1,15 @@
 ## examples
 1. Basic (url) rules
-1.1. Blocking
-1.2. Exceptions
-1.3. Options
+2. Blocking
+3. Exceptions
+4. Options
 * $image, $stylesheet, $xmlhttprequest
 * $empty
 * $popup
 * $mp4
-1.4. $replace rules
-1.5. RegExp rules
-2. Elemhide
-3. CSS injections
-4. JS rules
-5. HTML filtering rules
+5. $replace rules
+6. RegExp rules
+7. Elemhide
+8. CSS injections
+9. JS rules
+10. HTML filtering rules
