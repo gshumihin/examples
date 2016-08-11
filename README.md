@@ -10,7 +10,7 @@
   * $replace rules
   * [RegExp rules](#Использование-регулярных-выражений)
 2. [Elemhide](http://gshumihin.github.io/examples/filterrules/02_Elemhide.html)
-3. [CSS-injections](#Правила-для-вставки-CSS)
+3. [CSS-injections](#CSS-injections)
 4. [JS rules](#Правила-для-вставки-javascript-кода)
 5. HTML filtering rules
 
@@ -53,7 +53,7 @@
 
 
 
-###Правила для вставки CSS
+### CSS injections
 
 Иногда нам недостаточно просто скрыть какой-либо элемент, чтобы заблокировать рекламу. Например, блокировка рекламного элемента может просто сломать верстку сайта. Для таких случаев Adguard позволяет использовать гораздо более гибкие правила, чем обычные правила сокрытия.
 
