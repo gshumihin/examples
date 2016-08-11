@@ -30,9 +30,11 @@
 
 Разделитель — это любой символ кроме букв, цифр или одного из следующих символов: <code>— . %</code>, а также это может быть конец адреса. В следующем примере все разделители показаны красным:
 
+<p>
 <span class="code">
 <pre class="code-rule"><tt>http:<font color="red">//</font>domain.com<font color="red">/</font>foo.bar<font color="red">?</font>a<font color="red">=</font>12<font color="red">&amp;</font>b<font color="red">=</font>%D1%82%D0%B5%D1%81%D1%82</tt>.</pre>
 </span>
+</p>
 Этот адрес может быть блокирован правилом ^domain.com^ или ^%D1%82%D0%B5%D1%81%D1%82^ или ^foo.bar^.
 
 Комментарии
