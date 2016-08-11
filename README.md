@@ -2,7 +2,7 @@
 1. [Basic (url) rules](http://gshumihin.github.io/examples/filterrules/01_basic_rules.html#)
  * [Blocking](http://gshumihin.github.io/examples/filterrules/01_basic_rules.html#)
  * [Exceptions](http://gshumihin.github.io/examples/filterrules/01_2_Exceptions.html#)
- * [Options](options)
+ * [Options](#options)
     * $image, $stylesheet, $xmlhttprequest
     * $empty
     * $popup
