@@ -1,5 +1,5 @@
 ## examples
-1. Basic (url) rules
+1. [Basic (url) rules](http://gshumihin.github.io/examples/filterrules/01_basic_rules.html#)
  * Blocking
  * Exceptions
  * Options
