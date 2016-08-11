@@ -10,7 +10,7 @@
   * $replace rules
   * [RegExp rules](#Использование-регулярных-выражений)
 2. [Elemhide](http://gshumihin.github.io/examples/filterrules/02_Elemhide.html)
-3. [CSS injections](#Правила-для-вставки-CSS)
+3. [CSS-injections](#Правила-для-вставки-CSS)
 4. [JS rules](#Правила-для-вставки-javascript-кода)
 5. HTML filtering rules
 
