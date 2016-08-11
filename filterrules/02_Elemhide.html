@@ -88,7 +88,7 @@
                 Иногда вы будете встречать рекламу (как представлена выше), которая не может быть заблокирована потому, что она была внедрена как текст в саму веб-страницу. Если вы посмотрите исходный код такой страницы, то найдёте нечто вроде этого:
             </p>
 
-            <pre class="code-rule"><tt><span class="code-tag">            &lt;div class=<span class="code-quote">"texxtad"</span>&gt;</span>
+            <pre class="code-rule"><tt><span class="code-tag">            &lt;div class=<span class="code-quote">"textad"</span>&gt;</span>
                 Дешевые пельмени, здесь и сейчас!
             <span class="code-tag">&lt;/div&gt;</span>
             <span class="code-tag">&lt;div id=<span class="code-quote">"sponsorad"</span>&gt;</span>
@@ -118,17 +118,18 @@
                 Также, можно скрывать элементы лишь по их имени. Например, для скрытия третьего рекламного слогана можно добавить правило:
                 <br><code>##textad</code> 
             </p>
-            <p>
-
-            </p>
             
             <h2 class="content-subhead">Ограничение правил определенными доменами</h2>
 
             <p>
+<<<<<<< HEAD
                 Обычно вы хотите скрыть определенную рекламу на определенном сайте и не хотите, чтобы это правило применялось на других сайтах. Например, правило <code>##.texxtad</code> может скрыть полезный код на некоторых сайтах. 
                 <br>Для того, чтоб заблокировать первый рекламный слоган только на домене <code>github.io</code>, павило необходимо переписать следующим образом:
                 <br><code>||github.io/##.texxtad</code>
                 <br>Такое правило будет применено на <code>http://github.io/</code> и <code>http://something.github.com/</code> , но не на <code>http://github.com/</code>.
+=======
+                Обычно вы хотите скрыть определенную рекламу на определенном сайте и не хотите, чтобы это правило применялось на других сайтах. Например, правило ##.sponsor может скрыть полезный код на некоторых сайтах. Но если вы напишете его как example.com##.sponsor оно будет применено на http://example.com/ и http://something.example.com/ но не на http://example.org/.
+>>>>>>> parent of 9112c70... style changes
             </p>
             <p>
                 Вы также можете определить множество доменов — просто разделите их запятыми: <code>domain1.example,domain2.example,domain3.example##.sponsor</code>.
@@ -207,6 +208,9 @@
                     </tr>
                 </tbody>
             </table>
+            <p>
+                sdlkfhgsdflksdiyfb
+            </p>
             
         </div>
     </div>
