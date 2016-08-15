@@ -4,7 +4,7 @@
  * [Exceptions](http://gshumihin.github.io/examples/filterrules/01_2_Exceptions.html)
  * [Options](#options)
  	* [old $](#Основные-параметры)
-    * $image, $stylesheet, $xmlhttprequest
+    * [$image, $stylesheet, $xmlhttprequest](#Параметры-image,-stylesheet,-xmlhttpreauest)
     * $empty
     * $popup
     * $mp4
@@ -44,6 +44,10 @@
 
 <code>||domain.ru$match-case,third-party</code>.
 Здесь <code>||domain.ru</code> - это само правило, а <code>match-case</code> и <code>third-party</code> - его параметры.
+
+
+### Параметры image, stylesheet, xmlhttprequest
+
 
 
 ### Использование регулярных выражений
