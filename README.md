@@ -5,9 +5,9 @@
  * [Options](#options)
  	* [old $](#Основные-параметры)
     * [$image, $stylesheet, $xmlhttprequest](#Параметры-image-stylesheet-xmlhttprequest)
-    * [$empty](Параметр-empty)
+    * [$empty](#Параметр-empty)
     * $popup
-    * [$mp4](Параметр-mp4)
+    * [$mp4](#Параметр-mp4)
   * $replace rules
   * [RegExp rules](#Использование-регулярных-выражений)
 2. [Elemhide](http://gshumihin.github.io/examples/filterrules/02_Elemhide.html)
