@@ -49,11 +49,11 @@
 ### Параметры image stylesheet xmlhttprequest
 <ul>
 	<li>
-		image - позволяет блокировать загрузку картинок. Например, правило <code>||example.com$image</code> будет блокировать загрузку всех картинок на домене <code>example.com</code> 
+		<tt>image</tt> - позволяет блокировать загрузку картинок. Например, правило <code>||example.com$image</code> будет блокировать загрузку всех картинок на домене <code>example.com</code> 
 		С помощью параметра <code>$image</code>  можно, наоборот, разблокировать показ всех картинок. <code>@@||exmple.ru/mainpage$image</code> - такое правило разблокирует загрузку картинок на странице <code>example.ru/mainpage</code>
 	</li>
 	<li>
-		stylesheet - позволяет бловировать загрузку css-стилей.  
+		<tt>stylesheet</tt> - позволяет бловировать загрузку css-стилей.  
 	</li>
 </ul>
 
