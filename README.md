@@ -4,7 +4,7 @@
  * [Exceptions](http://gshumihin.github.io/examples/filterrules/01_2_Exceptions.html)
  * [Options](#options)
  	* [old $](#Основные-параметры)
-    * [$image, $stylesheet, $xmlhttprequest](#Параметры-image-stylesheet-xmlhttpreauest)
+    * [$image, $stylesheet, $xmlhttprequest](#Параметры-image,stylesheet,xmlhttpreauest)
     * $empty
     * $popup
     * $mp4
