@@ -46,7 +46,7 @@
 Здесь <code>||domain.ru</code> - это само правило, а <code>match-case</code> и <code>third-party</code> - его параметры.
 
 
-### Параметры image, stylesheet, xmlhttprequest
+### Параметры image,stylesheet,xmlhttprequest
 
 
 
