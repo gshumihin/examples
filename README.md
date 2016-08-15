@@ -50,12 +50,8 @@
 <ul>
 	<li>
 		<tt>image</tt> - позволяет блокировать загрузку картинок. Например, правило <code>||example.com$image</code> будет блокировать загрузку всех картинок на домене <code>example.com</code> 
-		<p>
-			С помощью параметра <code>$image</code>  можно, наоборот, разблокировать показ всех картинок.
-		</P>
-		<P>
-			 <code>@@||exmple.ru/mainpage$image</code> - такое правило разблокирует загрузку картинок на странице <code>example.ru/mainpage</code>
-		</p>
+			<br>С помощью параметра <code>$image</code>  можно, наоборот, разблокировать показ всех картинок. 
+			<br><code>@@||exmple.ru/mainpage$image</code> - такое правило разблокирует загрузку картинок на странице <code>example.ru/mainpage</code>
 	</li>
 	<li>
 		<tt>stylesheet</tt> - позволяет бловировать загрузку css-стилей.  
