@@ -55,7 +55,7 @@ _Examples:_
 _Examples:_
 
 ```
-||exmaple.com/ads/banner*.gif
+||exmaple.com/ads/banner*
 ```
 
 
