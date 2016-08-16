@@ -1,6 +1,6 @@
 # Examples
 1. [Basic (url) rules](http://gshumihin.github.io/examples/filterrules/01_basic_rules.html)
- * [Blocking](http://gshumihin.github.io/examples/filterrules/01_basic_rules.html)
+ * [Blocking](#URL-Blocking)
  * [Exceptions](http://gshumihin.github.io/examples/filterrules/01_2_Exceptions.html)
  * [Options](#options)
  	* [old $](#Основные-параметры)
@@ -14,6 +14,27 @@
 3. [CSS-injections](#css-injections)
 4. [JS rules](#Правила-для-вставки-javascript-кода)
 5. [HTML filtering rules](#Правила-фильтрации-html-кода)
+
+
+## Basic rules
+
+TBD: описалово придумать
+
+#### Syntax
+
+```
+[||],[@@]pattern[$option1],[$option2],...
+```
+	* || и @@ - что это такое
+	* pattern - что это такое
+	* options - два слова про опции
+
+_Examples:_
+
+||example.com$third-party,image
+
+
+### URL Blocking
 
 
 ## Options   
