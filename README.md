@@ -46,10 +46,8 @@
 Здесь <code>||domain.ru</code> - это само правило, а <code>match-case</code> и <code>third-party</code> - его параметры.
 
 
-### Параметры image stylesheet xmlhttprequest
-<ul>
-	<li>
-		<tt>image</tt> - позволяет блокировать загрузку картинок. Например, правило <code>||example.com$image</code> будет блокировать загрузку всех картинок на домене <code>example.com</code> 
+## Параметры image stylesheet xmlhttprequest
+image позволяет блокировать загрузку картинок. Например, правило `example.com$image` будет блокировать загрузку всех картинок на домене `example.com` 
 			<br>С помощью параметра <code>$image</code>  можно, наоборот, разблокировать показ всех картинок. 
 			<br><code>@@||exmple.ru/mainpage$image</code> - такое правило разблокирует загрузку картинок на странице <code>http://example.ru/mainpage</code>
 	</li>
