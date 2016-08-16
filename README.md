@@ -47,7 +47,8 @@
 
 
 ## Параметры image stylesheet xmlhttprequest
-### Image 
+
+### $Image 
 
 Позволяет блокировать загрузку картинок. 
 
