@@ -40,9 +40,10 @@ _Examples:_
 ```
 More exmples [here](http://gshumihin.github.io/examples/filterrules/01_basic_rules.html). 
 
+___
 ## URL Blocking
 
-Самый простой вид правил. Блокирует конкретный URL.
+Самый простой вид правил. Блокирует конкретный URL. Например, можно заблокировать картинку, расположенную по определнному URL-адресу.
 
 #### Syntax
 
@@ -58,7 +59,7 @@ _Examples:_
 ||exmaple.com/ads/banner*
 ```
 
-
+___
 ## Exceptions
 
 Правила-исключения позволяют исключать из фильтрации необходимые элементы на странице, страницы полностью или домены целиком.
@@ -77,6 +78,7 @@ _Example:_
 ```
 More examples [here](http://gshumihin.github.io/examples/filterrules/01_2_Exceptions.html)
 
+___
 ## Options   
 
 Соответствие началу/концу адреса
