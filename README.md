@@ -48,8 +48,11 @@
 
 ## Параметры image stylesheet xmlhttprequest
 ### Image 
+
 Позволяет блокировать загрузку картинок. 
+
 #### Examples
+
 * `||example.com$image` - такое правило заблокирует загрузку всех картинок на `example.com` 
 * `||exmple.ru/mainpage$image` - такое правило наоборот, разблокирует загрузку картинок на странице `http://example.ru/mainpage`
 
