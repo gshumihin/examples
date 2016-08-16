@@ -35,7 +35,9 @@ TBD: описалово придумать
 
 _Examples:_
 
+```
 ||example.com$third-party,image
+```
 
 
 ### URL Blocking
