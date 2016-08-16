@@ -38,7 +38,7 @@ _Examples:_
 ```
 ||example.com$third-party,image
 ```
-
+More exmples [here](http://gshumihin.github.io/examples/filterrules/01_basic_rules.html). 
 
 ### URL Blocking
 
