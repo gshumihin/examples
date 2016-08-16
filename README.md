@@ -50,8 +50,8 @@
 ### Image 
 Позволяет блокировать загрузку картинок. 
 #### Examples
-*`||example.com$image` - такое правило заблокирует загрузку всех картинок на `example.com` 
-*`||exmple.ru/mainpage$image` - такое правило наоборот, разблокирует загрузку картинок на странице `http://example.ru/mainpage`
+* `||example.com$image` - такое правило заблокирует загрузку всех картинок на `example.com` 
+* `||exmple.ru/mainpage$image` - такое правило наоборот, разблокирует загрузку картинок на странице `http://example.ru/mainpage`
 
 
 <tt>stylesheet</tt> - позволяет бловировать загрузку css-стилей. Например, правило <code>||example.com$stylesheet</code> будет блокировать загрузку всех стилей на домене example.com. 
