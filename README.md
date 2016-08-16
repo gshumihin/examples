@@ -40,13 +40,13 @@ _Examples:_
 ```
 More exmples [here](http://gshumihin.github.io/examples/filterrules/01_basic_rules.html). 
 
-### URL Blocking
+## URL Blocking
 
 Самый простой вид правил. Блокирует конкретный URL.
 
 #### Syntax
 
-[||]URL[*]
+`[||]URL[*]`
 
 * || что это такое
 * URL - адрес, который необходимо заблокировать
@@ -58,6 +58,24 @@ _Examples:_
 ||exmaple.com/ads/banner*
 ```
 
+
+## Exceptions
+
+Правила-исключения позволяют исключать из фильтрации необходимые элементы на странице, страницы полностью или домены целиком.
+Так же, с помощью правил-исключений можно отменять работу других правил.
+
+#### Syntax
+
+```
+@@[||]pattern[$option1],[$option2],...
+```
+
+_Example:_
+
+```
+@@||example.com$document
+```
+More examples [here](http://gshumihin.github.io/examples/filterrules/01_2_Exceptions.html)
 
 ## Options   
 
