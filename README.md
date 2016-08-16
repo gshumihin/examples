@@ -1,7 +1,7 @@
 # Examples
 1. [Basic (url) rules](http://gshumihin.github.io/examples/filterrules/01_basic_rules.html)
  * [Blocking](#url-blocking)
- * [Exceptions](#Exceptions)
+ * [Exceptions](#exceptions)
  * [Options](#options)
  	* [old $](#Основные-параметры)
     * [$image, $stylesheet, $xmlhttprequest](#Параметры-image-stylesheet-xmlhttprequest)
