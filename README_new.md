@@ -94,7 +94,7 @@ rule = pattern [ "$" modifiers ]
 modifiers = ....
 ```
 
-*domain*
+**domain**
 
 TBD: текст
 
@@ -102,7 +102,7 @@ _Examlple:_
 
 TBD: example
 
-*third-party*
+**third-party**
 
 TBD: текст
 
@@ -110,7 +110,7 @@ _Examlple:_
 
 TBD: example
 
-*popup*
+**popup**
 
 TBD: текст
 
@@ -118,7 +118,7 @@ _Examlple:_
 
 TBD: example
 
-*match-case*
+**match-case**
 
 TBD: текст
 
@@ -126,7 +126,7 @@ _Examlple:_
 
 TBD: example
 
-*image*
+**image**
 
 TBD: текст
 
@@ -134,7 +134,7 @@ _Examlple:_
 
 TBD: example
 
-*image*
+**image**
 
 TBD: текст
 
@@ -142,7 +142,7 @@ _Examlple:_
 
 TBD: example
 
-*stylesheet*
+**stylesheet**
 
 TBD: текст
 
@@ -150,7 +150,7 @@ _Examlple:_
 
 TBD: example
 
-*xmlhttprequest*
+**xmlhttprequest**
 
 TBD: текст
 
@@ -158,7 +158,7 @@ _Examlple:_
 
 TBD: example
 
-*empty*
+**empty**
 
 TBD: текст
 
@@ -166,7 +166,7 @@ _Examlple:_
 
 TBD: example
 
-*mp4*
+**mp4**
 
 TBD: текст
 
@@ -185,7 +185,7 @@ rule = [@@] pattern [ "$" modifiers ]
 modifiers = ....
 ```
 
-*elemhide*
+**elemhide**
 
 TBD: текст
 
@@ -193,7 +193,7 @@ _Examlple:_
 
 TBD: example
 
-*content*
+**content**
 
 TBD: текст
 
@@ -201,7 +201,7 @@ _Examlple:_
 
 TBD: example
 
-*jsonjext*
+**jsinject**
 
 TBD: текст
 
@@ -209,7 +209,7 @@ _Examlple:_
 
 TBD: example
 
-*urlblock*
+**urlblock**
 
 TBD: текст
 
@@ -217,7 +217,7 @@ _Examlple:_
 
 TBD: example
 
-*document*
+**document**
 
 TBD: текст
 
@@ -225,7 +225,7 @@ _Examlple:_
 
 TBD: example
 
-*generichide*
+**generichide**
 
 TBD: текст
 
@@ -233,7 +233,7 @@ _Examlple:_
 
 TBD: example
 
-*genericblock*
+**genericblock**
 
 TBD: текст
 
