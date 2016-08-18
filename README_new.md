@@ -38,7 +38,7 @@ _Examples:_
 * Here's simple URL blocking rule with explanation
 
 * Here's example of exception rule with some words about it
-
+___
 
 ### Options
 
@@ -262,6 +262,7 @@ TBD: текст про вот это вот все
 
 ```
 rule = pattern { options }
+```
 
 **Pattern:**
 
