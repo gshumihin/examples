@@ -1,10 +1,9 @@
 # Examples
 1. [Basic (url) rules](#basic-rules)
   * [Options](#options)
- 	* [old $](#Основные-параметры)
-    * [Базовые параметры](#basic-rule-modifiers)
+ 	  * [Базовые параметры](#basic-rule-modifiers)
     * [Параметры для правил-исключений](#exception-rules-modofiers)
-    * $[Replace rules](#advanced-modifiers)
+    * [Replace rules](#advanced-modifiers)
     * [RegExp rules](#regexp-support)
 2. [Elemhide](#Elemhide)
 3. [CSS-injections](#css-injections)
