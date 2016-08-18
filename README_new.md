@@ -1,17 +1,15 @@
 # Examples
 1. [Basic (url) rules](#basic-rules)
- * [Blocking](#url-blocking)
- * [Exceptions](#exceptions)
- * [Options](#options)
+  * [Options](#options)
  	* [old $](#Основные-параметры)
     * [Базовые параметры](#basic-rule-modifiers)
     * [Параметры для правил-исключений](#exception-rules-modofiers)
     * $[Replace rules](#advanced-modifiers)
     * [RegExp rules](#regexp-support)
-2. [Elemhide](http://gshumihin.github.io/examples/filterrules/02_Elemhide.html)
+2. [Elemhide](#Elemhide)
 3. [CSS-injections](#css-injections)
-4. [JS rules](#Правила-для-вставки-javascript-кода)
-5. [HTML filtering rules](#Правила-фильтрации-html-кода)
+4. [JS rules](#javascript-rules)
+5. [HTML filtering rules](#html-filtering-rules)
 
 
 ## Basic rules
@@ -31,52 +29,17 @@ modifers = ....
 
 #### Pattern special chars
 
-* `||`
+* `||` 
 * `*`
 * `^`
 * `|`
 
+_Examples:_
 
-### Url blocking
+* Here's simple URL blocking rule with explanation
 
-TBD: add some text about it 
+* Here's example of exception rule with some words about it
 
-#### Syntax
-
-```
-rule = pattern
-```
-
-Where pattern = URL to block
-
-_Example:_
-
-`http://example.com/ads/banner1.jpg`
-
-Больше примеров [тут](http://gshumihin.github.io/examples/filterrules/01_basic_rules.html)
-
-
-### Exceptions
-
-TBD: скопипастить сюда тексты
-
-#### Syntax
-
-```
-rule = [@@] pattern [ "$" modifiers ]
-```
-
-* `@@` описалово
-* `pattern` - что тут может быть
-* `modifiers` дать список модифаеров, более детальная инфа [тут](#exception-rules-modifiers)
-
-_Example:_
-
-```
-||@@example.com/pics
-```
-
-More examples [here](http://gshumihin.github.io/examples/filterrules/01_2_Exceptions.html)
 
 ### Options
 
@@ -265,3 +228,59 @@ rule = pattern [ "$" replace ]
 _Example:_
 
 TBD: примерчик
+
+
+### Elemhide
+
+TBD: Some words about elemhide rules
+
+#### Syntax
+
+```
+rule = pattern
+```
+
+Pattern can include:
+
+* `#`
+* `.`
+* `||URL`
+
+_Example:_
+
+```
+||example.com##textad
+```
+
+More examples [here](http://gshumihin.github.io/examples/filterrules/02_Elemhide.html#)
+
+
+### CSS-injections
+
+TBD: текст про вот это вот все
+
+#### Syntax
+
+```
+rule = pattern { options }
+
+**Pattern:**
+
+* URL
+* special chars
+
+**Options:**
+
+TBD: some text about options
+
+_Example:_
+
+```
+example.com#@$#body { background-color: #333!important; }
+```
+
+### Javascript rules
+
+
+
+### HTML filtering rules
