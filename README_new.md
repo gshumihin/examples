@@ -244,6 +244,11 @@ Pattern can include:
 * `#`
 * `.`
 * `||URL`
+* `~`
+
+**About domains and elemhiding**
+
+TBD: text
 
 _Example:_
 
@@ -281,6 +286,73 @@ example.com#@$#body { background-color: #333!important; }
 
 ### Javascript rules
 
+TBD: text about it
+
+#### Syntax
+
+```
+rule = pattern [ "$" (js-code) ]
+```
+
+* patten
+* `@` usage (for exception js-rules)
+
+_Example:_
+
+```
+example.com#%#$('#somebanner').remove();
+```
 
 
 ### HTML filtering rules
+
+TBD: text
+
+#### Syntax
+
+```
+rule = pattern [ attribute ]
+attribute = ....
+```
+
+#### Attributes
+
+**loaded-script**
+
+TBD: text
+
+_Example_
+
+TBD: example
+
+**max-length**
+
+TBD: text
+
+_Example_
+
+TBD: example
+
+**min-length**
+
+TBD: text
+
+_Example_
+
+TBD: example
+
+**parent-elements**
+
+TBD: text
+
+_Example_
+
+TBD: example
+
+**parent-search-level**
+
+TBD: text
+
+_Example_
+
+TBD: example
