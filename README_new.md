@@ -315,6 +315,10 @@ rule = pattern [ attribute ]
 attribute = ....
 ```
 
+_Example:_
+
+TBD: example
+
 #### Attributes
 
 **loaded-script**
