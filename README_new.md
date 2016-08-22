@@ -5,7 +5,7 @@
     * [Параметры для правил-исключений](#exception-rules-modifiers)
     * [Replace rules](#advanced-modifiers)
     * [RegExp rules](#regexp-support)
-2. [Elemhide](#Elemhide)
+2. [Elemhide](#elemhide)
 3. [CSS-injections](#css-injections)
 4. [JS rules](#javascript-rules)
 5. [HTML filtering rules](#html-filtering-rules)
