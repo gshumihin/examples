@@ -9,16 +9,16 @@
     * [Replace rules](#advanced-modifiers)
     * [RegExp rules](#regexp-support)
 2. [Elemhide](#elemhide)
-  * [Синтаксис](#syntax)
+  * [Синтаксис](#syntax-2)
   * [Примеры](#examples)
 3. [CSS-injections](#css-injections)
-  * [Синтаксис](#syntax)
+  * [Синтаксис](#syntax-3)
   * [Примеры](#examples)
 4. [JS rules](#javascript-rules)
-  * [Синтаксис](#syntax)
+  * [Синтаксис](#syntax-4)
   * [Примеры](#examples)
 5. [HTML filtering rules](#html-filtering-rules)
-  * [Синтаксис](#syntax)
+  * [Синтаксис](#syntax-5)
   * [Примеры](#examples)
   * [Атрибуты](#attributes)
 
@@ -255,7 +255,7 @@ Pattern can include:
 
 TBD: text
 
-_Example:_
+#### Examples
 
 ```
 ||example.com##textad
