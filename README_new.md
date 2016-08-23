@@ -1,23 +1,35 @@
 # Examples
-1. [Basic (url) rules](#basic-rules)
-  * [Options](#options)
- 	  * [Базовые параметры](#basic-rule-modifiers)
+1. [Basic (url) rules](#Базовые-правила)
+  * [Синтаксис](#Синтаксис)
+    * [Pattern special characters](#pattern-special-characters)
+    * [Примеры](#Примеры)
+  * [Модификаторы](#Модификаторы)
+ 	  * [Базовые модификаторы](#basic-rule-modifiers)
     * [Параметры для правил-исключений](#exception-rules-modifiers)
     * [Replace rules](#advanced-modifiers)
     * [RegExp rules](#regexp-support)
 2. [Elemhide](#elemhide)
+  * [Синтаксис](#syntax)
+  * [Примеры](#examples)
 3. [CSS-injections](#css-injections)
+  * [Синтаксис](#syntax)
+  * [Примеры](#examples)
 4. [JS rules](#javascript-rules)
+  * [Синтаксис](#syntax)
+  * [Примеры](#examples)
 5. [HTML filtering rules](#html-filtering-rules)
+  * [Синтаксис](#syntax)
+  * [Примеры](#examples)
+  * [Атрибуты](#attributes)
 
 
-## Basic rules
+##  Базовые правила
 
 Так называемые _"Основные правила"_ - самый простой вид правил. Эти правила предназначены для блокировки запросов на определенный URL. 
 Основной принцип для этого типа правил достаточно прост: необходимо указать адрес, где необходимо убрать рекламу + дополнительные параметры.
 В общем виде правило будет выглядеть следующим образом:
 
-#### Syntax
+### Синтаксис
 
 ```
 rule = [@@] pattern [ "$" modifiers ]
@@ -28,40 +40,33 @@ modifers = ....
 * @@ - модификатор, который используется для обозначения правил-исключений. С такого модификатора должны начинаться правила, отключающие фильтрацию.
 * modifiers - Параметры, используемые для "уточнения" общего правила. Параметр начинается с символа "`$`".
 
-#### Pattern special chars
+#### Pattern special sharacters
 
 * `||` - Domain name anchor. Указывается перед URL-адресом, где будет блокироваться реклама. Позволяет не указывать все поддомены, на которых необходимо заблокировать рекламу. 
 * `*` - Wildcard character. Просто символ, обозначающий "произвольный набор символов"
 * `^` - указатель для разделительного символа
 * `|` - указатель на конец адреса. Например, правило `swf|` будет блокировать `http://example.com/annoyingflash.swf` , но не `http://example.com/swf/index.html` .
 
-_Examples:_
+#### Примеры
 
 * `||example.com/ads/*`  - самое простое правило, которое просто блокирует запрос на URL. В данном случае по указанному адресу хранятся картинки.
 
 * `@@||example.com$document` - наиболее общее правило-исключение. Именно это правило отключает всю возможную фильтрацию на example.com и всех поддоменах. Есть ряд параметров, которые так же можно использовать в правилах-исключения. Более подробно о правилах-исключениях и параметрах, которые могут в таких правилах использоваться, написано [ниже](#exception-rules-modifiers).
 ___
 
-### Options
+### Модификаторы
 
 _Возможности, описанные в этом разделе, обычно используются опытными пользователями. Они расширяют возможности «Общих правил», но для их применения необходимо иметь начальное представление о работе браузера._
 
-Вы можете изменить поведение «общего правила», используя дополнительные параметры. Список этих параметров располагается в конце правила за знаком доллара $ и разделяется запятыми. Например:
+Вы можете изменить поведение «общего правила», используя дополнительные модификаторы. Список этих параметров располагается в конце правила за знаком доллара $ и разделяется запятыми. Например:
 ```
 ||domain.com$popup,third-party
 ```
 
 
-### Basic rule modifiers
+#### Basic rule modifiers
 
-TBD: text about
-
-#### Syntax
-
-```
-rule = pattern [ "$" modifiers ]
-modifiers = ....
-```
+Приведенные ниже модификаторы являются наиболее простыми (для понимания) и часто применяемыми. Они не могут быть использованы в правилах-исключениях.
 
 **domain**
 
@@ -143,16 +148,9 @@ _Examlple:_
 
 TBD: example
 
-### Exception rules modifiers
+#### Exception rules modifiers
 
-TBD: text about this shit
-
-#### Syntax
-
-```
-rule = [@@] pattern [ "$" modifiers ]
-modifiers = ....
-```
+Модификаторы, используемые только в правилах-исключениях.
 
 **elemhide**
 
@@ -236,7 +234,7 @@ _Example:_
 TBD: примерчик
 
 
-### Elemhide
+## Elemhide
 
 TBD: Some words about elemhide rules
 
@@ -266,11 +264,11 @@ _Example:_
 More examples [here](http://gshumihin.github.io/examples/filterrules/02_Elemhide.html#)
 
 
-### CSS-injections
+## CSS-injections
 
 TBD: текст про вот это вот все
 
-#### Syntax
+### Syntax
 
 ```
 rule = pattern { options }
@@ -285,17 +283,17 @@ rule = pattern { options }
 
 TBD: some text about options
 
-_Example:_
+### Examples
 
 ```
 example.com#@$#body { background-color: #333!important; }
 ```
 
-### Javascript rules
+## Javascript rules
 
 TBD: text about it
 
-#### Syntax
+### Syntax
 
 ```
 rule = pattern [ "$" (js-code) ]
@@ -304,25 +302,25 @@ rule = pattern [ "$" (js-code) ]
 * patten
 * `@` usage (for exception js-rules)
 
-_Example:_
+### Examples
 
 ```
 example.com#%#$('#somebanner').remove();
 ```
 
 
-### HTML filtering rules
+## HTML filtering rules
 
 TBD: text
 
-#### Syntax
+### Syntax
 
 ```
 rule = pattern [ attribute ]
 attribute = ....
 ```
 
-_Example:_
+### Examples
 
 TBD: example
 
