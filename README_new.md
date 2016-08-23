@@ -10,16 +10,16 @@
     * [RegExp rules](#regexp-support)
 2. [Elemhide](#elemhide)
   * [Синтаксис](#syntax-2)
-  * [Примеры](#examples)
+  * [Примеры](#examples-1)
 3. [CSS-injections](#css-injections)
   * [Синтаксис](#syntax-3)
-  * [Примеры](#examples)
+  * [Примеры](#examples-2)
 4. [JS rules](#javascript-rules)
   * [Синтаксис](#syntax-4)
-  * [Примеры](#examples)
+  * [Примеры](#examples-3)
 5. [HTML filtering rules](#html-filtering-rules)
   * [Синтаксис](#syntax-5)
-  * [Примеры](#examples)
+  * [Примеры](#examples-4)
   * [Атрибуты](#attributes)
 
 
@@ -238,7 +238,7 @@ TBD: примерчик
 
 TBD: Some words about elemhide rules
 
-#### Syntax
+### Syntax
 
 ```
 rule = pattern
@@ -255,7 +255,7 @@ Pattern can include:
 
 TBD: text
 
-#### Examples
+### Examples
 
 ```
 ||example.com##textad
