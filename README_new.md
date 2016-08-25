@@ -110,19 +110,11 @@ _Examlple:_
 
 **image**
 
-TBD: текст
+Блокирует все картинки на указанном домене.
 
 _Examlple:_
 
-TBD: example
-
-**image**
-
-TBD: текст
-
-_Examlple:_
-
-TBD: example
+* `||domain.com^$image` - данное правило заблокирует все картинки на домене `domain.com`
 
 **stylesheet**
 
