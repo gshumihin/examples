@@ -76,7 +76,7 @@ _Возможности, описанные в этом разделе, обыч
 Чтобы правило _не применялось_ на определенных доменах, перед доменным именем необходимо добавить символ `~`.
 
 
-_Examlples:_
+_Examples:_
 
 * `||baddomain.com/ads/banners*^$domain=example.com|example.ru` - блокировка контента на доменах `example.com` и `example.ru` 
 * `||baddomain.com/ads*^$domain=~example.ru` - контент будет блокироваться на всех доменах, кроме `example.ru`
@@ -87,7 +87,7 @@ _Examlples:_
 Ограничение на сторонние/собственные запросы. Если указан модификатор `third-party`, то правило применяется лишь к запросам ресурсов из внешних источников.
 `~third-party` ограничивает правило запросами из того же источника, что и открытая страница.
 
-_Examlples:_
+_Examples:_
 
 * `||domain.com$third-party` - правило применяется на всех сайтах, кроме самого `domain.com`
 * `||domain.com$~third-party` - такое правило уже будет применяться только на самом `domain.com`, но не на других сайтах
@@ -96,7 +96,7 @@ _Examlples:_
 
 Adguard будет пытаться закрыть браузерную вкладку для любого адреса, который подходит под правило с этим модификатором.
 
-_Examlples:_
+_Examples:_
 
 * `||domain.com*^$popup` - при попытке перехода на сайт `http:\\domain.com` с любой страницы в браузере, новая вкладка, в которой должен открыться указанный сайт, будет закрыта  
 
@@ -104,7 +104,7 @@ _Examlples:_
 
 Определяет правило, которое применяется только к адресам с совпадением регистра букв. По умолчанию регистр символов не учитывается.
 
-_Examlple:_
+_Examples:_
 
 * `*/BannerAd.gif$match-case` - такео правило будет блокировать `http://example.com/BannerAd.gif`, но не `http://example.com/bannerad.gif`.
 
@@ -112,41 +112,44 @@ _Examlple:_
 
 Блокирует все картинки на указанном домене.
 
-_Examlple:_
+_Examples:_
 
 * `||domain.com^$image` - данное правило заблокирует все картинки на домене `domain.com`
 
 **stylesheet**
 
-TBD: текст
+Блокирует загрузку CSS-стилей. При использовании `@@` наоборот, разблокирует.
 
-_Examlple:_
+_Examples:_
 
-TBD: example
+* `||domain.com/stylesheets^*$stylesheet` - блокирует загрузку css-стилей на указанных URL.
+* `@@||gooddomain.com^*$` - разблокирует все заблокированные стили на указанном домене.
 
 **xmlhttprequest**
 
-TBD: текст
+Блокирует xmlhttpsrequest-запрос (запрос, который браузер загружает без обновления страницы). 
+Напрмер, такие запросы зачастую пользуются интернет-магазинами при применении выбранных вами фильтров.
 
-_Examlple:_
+_Examples:_
 
-TBD: example
+* `||example.com/Banners/*$xmlhttrequest` - блокирует xmlhttp запросы на указзаном URL
+* `@@||example.ru^$xmlhttprequest` - разблокирует xmlhttp запросы на указанном домене 
 
 **empty**
 
 TBD: текст
 
-_Examlple:_
+_Examples:_
 
 TBD: example
 
 **mp4**
 
-TBD: текст
+Заменяет видео на заглушку. Данный модификатор на текущий момент не поддерживается расширениями.
 
-_Examlple:_
+_Examples:_
 
-TBD: example
+* `||example.com/videos/*.mp4$mp4,domain=best-videos.com` блокирует загрузку видео с URL `http://example.com/videos` на домене `http://best-videos.com`
 
 #### Exception rules modifiers
 
@@ -156,7 +159,7 @@ TBD: example
 
 TBD: текст
 
-_Examlple:_
+_Examples:_
 
 TBD: example
 
@@ -164,7 +167,7 @@ TBD: example
 
 TBD: текст
 
-_Examlple:_
+_Examples:_
 
 TBD: example
 
@@ -172,7 +175,7 @@ TBD: example
 
 TBD: текст
 
-_Examlple:_
+_Examples:_
 
 TBD: example
 
@@ -180,7 +183,7 @@ TBD: example
 
 TBD: текст
 
-_Examlple:_
+_Examples:_
 
 TBD: example
 
@@ -188,7 +191,7 @@ TBD: example
 
 TBD: текст
 
-_Examlple:_
+_Examples:_
 
 TBD: example
 
@@ -196,7 +199,7 @@ TBD: example
 
 TBD: текст
 
-_Examlple:_
+_Examples:_
 
 TBD: example
 
@@ -204,7 +207,7 @@ TBD: example
 
 TBD: текст
 
-_Examlple:_
+_Examples:_
 
 TBD: example
 
@@ -241,7 +244,8 @@ TBD: Some words about elemhide rules
 ### Syntax
 
 ```
-rule = pattern
+rrule = [domains] "##" selector
+domains = #( domain )
 ```
 
 Pattern can include:
