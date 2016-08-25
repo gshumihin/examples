@@ -6,18 +6,18 @@
   * [Модификаторы](#Модификаторы)
  	  * [Базовые модификаторы](#Базовые-модификаторы)
     * [Параметры для правил-исключений](#Модификаторы-правил-исплючений)
-    * [Replace rules](#advanced-modifiers)
-    * [RegExp rules](#regexp-support)
-2. [Elemhide](#elemhide)
+2. [Replace rules](#replace-rules)
+3. [RegExp rules](#regexp-support)
+4. [Elemhide](#elemhide)
   * [Синтаксис](#syntax-2)
   * [Примеры](#examples-1)
-3. [CSS-injections](#css-injections)
+5. [CSS-injections](#css-injections)
   * [Синтаксис](#syntax-3)
   * [Примеры](#examples-2)
-4. [JS rules](#javascript-rules)
+6. [JS rules](#javascript-rules)
   * [Синтаксис](#syntax-4)
   * [Примеры](#examples-3)
-5. [HTML filtering rules](#html-filtering-rules)
+7. [HTML filtering rules](#html-filtering-rules)
   * [Синтаксис](#syntax-5)
   * [Примеры](#examples-4)
   * [Атрибуты](#attributes)
@@ -223,7 +223,7 @@ rule = [@@] pattern [RegExp]
 
 _Exaple:_
 
-### Advanced modifiers
+### Replace rules
 
 TBD: text about *replace*
 
