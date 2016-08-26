@@ -15,7 +15,7 @@
     * [Параметры для правил-исключений](#Модификаторы-правил-исключений)
         * [$elemhide](#elemhide)
         * [$content](#content)
-        * [$jsinject](#jsinjext)
+        * [$jsinject](#jsinject)
         * [$urlblock](#urlblock)
         * [$document](#document)
         * [$generichide](#generichide)
