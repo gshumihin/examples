@@ -18,6 +18,7 @@
         * [$jsinject](#jsinject)
         * [$urlblock](#urlblock)
         * [$document](#document)
+    * [Generic-правила](#generic-rules)
         * [$generichide](#generichide)
         * [$genericblock](#genericblock)
 2. [Replace rules](#replace-rules)
@@ -216,21 +217,40 @@ _Examples:_
 
 * `@@||example.com^$document` - Полностью отключает фильтрацию на домене `example.com`
 
-##### **`generichide`**
+#### Generic rules
 
-Разблокирует элементы, заблокированные [правилами сокрытия](#elemhide) элементов _без ограничения на домен_.
+Generic-праила - это правила, действие которых не ограничено конкретными доменами
 
 _Examples_:
 
-* `@@||example.com^generichide` - разблокирует на домене `example.com` все элементы, скрытые правилами типа `##.element`. Но элементы, скрытые правилами с указанием домена (типа `||example.com^##.element2`), при этом разблокированы не будут.
+Например, следующие правила являются generic-правилами:
+```
+###banner
+~domain.com###banner
+||domain.com^
+||domain.com^$domain=~example.ru
+```
+А вот такие правила уже не является generic-правилом:
+```
+domain.com###banner
+||domain.com^$domain=example.ru
+```
+
+##### **`generichide`**
+
+Разблокирует элементы, заблокированные generic-[правилами сокрытия элементов](#elemhide).
+
+_Examples_:
+
+* `@@||example.com^generichide` - разблокирует на домене `example.com` все элементы, скрытые generic-правилами.
 
 ##### **`genericblock`**
 
-Разблокирует элементы, скрытые простыми URL правилами _без ограничения на домен_.
+Разблокирует элементы, скрытые простыми URL generic-правилами.
 
 _Examples:_
 
-* `@@||example.com^$genericblock` - разблокирует на домене `example.com` все элементы, скрытые правилами типа `/ads/banner1.jpg`. Но элементы, скрытые правилами с указанием домена (типа `||example.com/ads/banner2.jpg`), при этом разблокированы не будут.
+* `@@||example.com^$genericblock` - разблокирует на домене `example.com` все элементы, скрытые URL generic-правилами.
 
 ### RegExp support
 
