@@ -311,10 +311,8 @@ TBD: text
 
 ### Examples
 
-```
-||example.com###textad
-||example.com##.adblock
-```
+* `||example.com###textad` - заблокирует div с классом _textad_ `<div class=textad>`
+* `||example.com##.adblock` - 
 
 More examples [here](http://gshumihin.github.io/examples/filterrules/02_Elemhide.html#)
 
