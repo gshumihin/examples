@@ -312,24 +312,17 @@ rule = [domains] "##" selector
 domains = #( domain )
 ```
 
-Pattern can include:
+**Domains**
 
-* `#`
-* `.`
-* `||URL`
-* `~`
-
-**About domains and elemhiding**
-
-TBD: text
+Домен не обязателен для указания. Будет работать и праило `##.textad`, оно будет блокирвоать класс `textad` для всех доменов. 
+Указать можно как один, так и множетво доменов. Если доменов множетсво, их необходимо указать через запятую: `domain1,domain2,domain3##.ads`
+Для того, чтоб правило не работало на определенном домене, перед самим доменом необходимо добавить символ `~`. 
 
 ### Examples
 
-* `||example.com##.textad` - заблокирует `div` с классом _`textad`_ `<div class=textad>` на домене `example.com`
-* `||example.com###adblock` - скроет элемент по его атрибуту `id` `<div id="adblock">` на домене example.com
-* 
-
-More examples [here](http://gshumihin.github.io/examples/filterrules/02_Elemhide.html#)
+* `example.com##.textad` - заблокирует `div` с классом _`textad`_ `<div class=textad>` на домене `example.com`
+* `example.com,example.ru,domain.com###adblock` - скроет элемент по его атрибуту _`id`_ `<div id="adblock">` на доменах `example.com, example.ru, domain.com`
+* `~example.com##.textad` - заблокирует `div` с классом _`textad`_ `<div class=textad>` на всех доменах, кроме `example.com`
 
 ___
 ## CSS-injections
