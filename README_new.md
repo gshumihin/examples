@@ -23,7 +23,7 @@
         * [$genericblock](#genericblock)
 2. [RegExp rules](#regexp-support)
 3. [Replace rules](#replace-rules)
-4. [Elemhide](#elemhide)
+4. [Правила сокрытия элементов](#Правила-сокрытия-элемнтов)
   * [Синтаксис](#syntax-2)
   * [Примеры](#examples-1)
 5. [CSS-injections](#css-injections)
@@ -300,7 +300,7 @@ _Example:_
 
 
 ___
-## Elemhide
+## Правила сокрытия элементов
 
 **_Важно:_** Для работы с правилами скрытия необходимы знания HTML и CSS. Фактически, правила скрытия — это просто CSS-селекторы. Adguard добавляет на страницу собственные стили, состоящие из правил скрытия. Ко всем CSS-селекторам применяется стиль {display:none!important}.
 
@@ -359,16 +359,17 @@ example.com#@$#body { background-color: #333!important; }
 ___
 ## Javascript rules
 
-TBD: text about it
+Adguard поддерживает специальный тип правил, позволяющий вставить любой javascript-код на страницы интернет-сайтов.
 
 ### Syntax
 
 ```
-rule = pattern [ "$" (js-code) ]
+rule = [ URL ] pattern
+pattern = #%# (js-code)
 ```
 
-* patten
-* `@` usage (for exception js-rules)
+* _patten_ - включает в себя указатель на использование javascript-кода `#%#` и после этого следует необходимый для вставки код
+* _URL_ - необязательный элемент правила, так же можно использовать список доменов, просто перечислив их через запятую. Работа с домена происходит по аналогии с [правилами сокрытия элементов](#Правила-сокрытия-элемнтов)
 
 ### Examples
 
