@@ -257,31 +257,44 @@ ___
 
 Если вы хотите еще большей гибкости при составлении правил, вы можете использовать [регулярные выражения](https://ru.wikipedia.org/wiki/%D0%A0%D0%B5%D0%B3%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D1%8B%D0%B5_%D0%B2%D1%8B%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F).
 
+Суть работы проста: найденные при помощи регекспа адреса, будут заблокированы. Так же, возможно использование параметров обычных URL-правил.
+
 **_Важное замечание:_** с точки зрения производительности рекомендуется по возможности избегать использования регулярных выражений.
 
 #### Syntax
 
 ```
-rule = [@@] pattern [RegExp]
+rule = pattern [ $ modifiers ]
 ```
+В случае RegExp правил, в `pattern` записывается само регулярное выражение.
 
 _Exaple:_
 
-`/banner\d+/` - такое правило, например, подойдет для блокировки `banner123` или `banner321`, но не будет работать для banners.
+* `/banner\d+/` - такое правило, например, подойдет для блокировки URL, модержащих `banner123` или `banner321`, но не будет работать для banners.
+* `/banner\d+/$domain=example.com` - так же, как и правило из примера выше, будет блокировать адреса, подходящие под это правило, но уже только на домене `example.com`
 
 ___
 ## Replace rules
 
-TBD: text about *replace*
+Данный вид правил предназначем для "подмены" контента. При помощи регулярных выражений указывается сначала, _что_ необходимо заменить, затем то, _на что_ будет произведена замена. При этом, не обязательно что-то вставлять на замену, можно просто заменить "ни на что".
 
 #### Syntax
 
 ```
-rule = pattern [ "$" replace ]
+rule = pattern [ $ replace ] [RegExp1][RegExp2] **TBD!!!!!!!**
 ```
 _Example:_
 
-TBD: примерчик
+* `||domain.com/config.xml$replace=/(<Ad[\s\S]*?>)[\s\S]*<\/Ad>/\$1<\/Ad>/` - в данном примере тэг `Ad` "опорожнится"
+
+```
+<AdServingTemplate>
+<Ad id="advert-1">
+//ads config
+</Ad>
+</AdServingTemplate>
+```
+
 
 ___
 ## Elemhide
@@ -311,8 +324,9 @@ TBD: text
 
 ### Examples
 
-* `||example.com###textad` - заблокирует div с классом _textad_ `<div class=textad>`
-* `||example.com##.adblock` - 
+* `||example.com##.textad` - заблокирует `div` с классом _`textad`_ `<div class=textad>` на домене `example.com`
+* `||example.com###adblock` - скроет элемент по его атрибуту `id` `<div id="adblock">` на домене example.com
+* 
 
 More examples [here](http://gshumihin.github.io/examples/filterrules/02_Elemhide.html#)
 
