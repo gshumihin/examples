@@ -460,7 +460,8 @@ _Example_
 
 _Example_
 
-```<table style="background: url('http://domain.com/banner.gif')">
+```
+<table style="background: url('http://domain.com/banner.gif')">
     <tr>
         <td>
             <a href="http://pelmeshki.com">Купил пельмешки БЫСТРО</a>
