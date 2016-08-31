@@ -348,7 +348,7 @@ ___
 ### Синтаксис
 
 ```
-rule = [ domain ] "#$#" selector { options }
+rule = [ domain ] "#$#" selector { style }
 ```
 
 **Domains** 
