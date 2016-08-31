@@ -369,7 +369,7 @@ rule = [ domain ] "#$#" selector { style }
 ### Примеры
 
 ```
-example.com#@$#body { background-color: #333!important; }
+example.com#$#body { background-color: #333!important; }
 ```
 ___
 ## Javascript rules
