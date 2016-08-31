@@ -43,7 +43,7 @@
     * [max-length](#max-length)
     * [min-length](#min-length)
     * [parent-elements](#parent-elements)
-    * [Parent-search-level](#parent-search-level)
+    * [parent-search-level](#parent-search-level)
 
 
 ##  Базовые правила
