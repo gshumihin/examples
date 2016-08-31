@@ -296,7 +296,7 @@ rule = pattern [ $ replace ] [RegExp1][RegExp2]
 
 _Примеры:_
 
-* `||domain.com/config.xml$replace=/(<Ad[\s\S]*?>)[\s\S]*<\/Ad>/\$1<\/Ad>/` - в данном примере тэг `Ad` "опорожнится"
+* `||domain.com/config.xml$replace=/(<Ad[\s\S]*?>)[\s\S]*<\/Ad>/\$1<\/Ad>/` - в данном примере тэг `Ad` будет очищен
 
 ```
 <AdServingTemplate>
